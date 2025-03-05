@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Coffee Shop Website Design</title>
+
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Custom CSS File Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .login-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+    .popup-content {
+        background: rgba(34, 28, 24, 0.95);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        width: 450px;
+        text-align: center;
+        position: relative;
+    }
+    .close-popup {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 20px;
+        cursor: pointer;
+        color: white;
+    }
+    h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+    .form-group {
+        text-align: left;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    input {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        background: #2e2a27;
+        color: white;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+    input::placeholder {
+        color: #b5a99b;
+    }
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #c49a6c;
+        border: none;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background 0.3s;
+    }
+    button:hover {
+        background: #a37850;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #b5a99b;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .hidden {
+        display: none;
+    }
+</style>
+<body>
+
+    <!-- Header Section Starts -->
+    <header class="header">
+        <a href="" class="logo">
+            <img src="images/logo.png" alt="">
+        </a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+            <a href="#" id="trigger-login">Login</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart open-cart" id="cart-btn">
+                <span class="cart-item-total"></span>
+            </div>
+            <div class="fas fa-bars" id="bars-btn"></div>
+        </div>
+        
+    </header>
+    <!-- Header Section Ends -->
+
+    <!-- Home Section Starts -->
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Fresh Coffee in the Morning</h3>
+            <p>Start your day with the perfect cup of coffee. Join our community of coffee lovers and discover rich flavors, expert brewing tips, and exclusive deals. Sign up now and make every morning special!.</p>
+            <button class="trigger-button" id="trigger-login">Get Yours Now</button>
+        </div>
+    </section>
+    <!-- Home Section Ends -->
+
+    <!-- Login Popup Section -->
+   
+   <!-- Login and Signup Popup Section -->
+<div class="login-popup" id="login-popup">
+    <div class="popup-content">
+        <span class="close-popup" id="close-popup">&times;</span>
+        
+        <!-- Login Form -->
+        <div id="login-form">
+            <h2>Welcome Back!</h2>
+            <p>Please log in to continue.</p>
+            <form>
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+            </form>
+        </div>
+        
+        <!-- Signup Form -->
+        <div id="signup-form" class="hidden">
+            <h2>Join Our Coffee Community</h2>
+            <form>
+                <div class="grid-container">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" placeholder="first name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" placeholder="last name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" placeholder="phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" placeholder="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" placeholder="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" placeholder="Confirm password" required>
+                    </div>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("trigger-login").addEventListener("click", function() {
+        document.getElementById("login-popup").style.display = "flex";
+        document.getElementById("login-form").style.display = "block";
+        document.getElementById("signup-form").style.display = "none";
+    });
+
+    document.getElementById("close-popup").addEventListener("click", function() {
+        document.getElementById("login-popup").style.display = "none";
+    });
+
+    document.getElementById("show-signup").addEventListener("click", function() {
+        document.getElementById("login-form").style.display = "none";
+        document.getElementById("signup-form").style.display = "block";
+    });
+
+    document.getElementById("show-login").addEventListener("click", function() {
+        document.getElementById("signup-form").style.display = "none";
+        document.getElementById("login-form").style.display = "block";
+    });
+</script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

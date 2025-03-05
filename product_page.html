@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href=".././styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" type="image/jpg" href=".././assets/favicon.jpg"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <title>Product Details</title>
+  </head>
+
+  <body>
+    <input type="checkbox" name="" id="check" />
+
+    <nav class="sticky">
+      <div class="icon">Niel li'</div>
+      <div class="search_box">
+        <input type="search" placeholder="Search products" />
+        <span class="fa fa-search"></span>
+      </div>
+
+      <ol>
+        <li><a href=".././index.html#Trending" class="btn btn-center">Trending </a></li>
+        <li><a href=".././index.html#Products" class="btn btn-center">Products</a></li>
+        <li><a href="./login.html" class="btn btn-center">Login/SignUp</a></li>
+      </ol>
+      <label for="check" class="bar">
+        <span class="fa fa-bars" id="bars"></span>
+        <span class="fa fa-times" id="times"></span>
+      </label>
+    </nav>
+  </body>
+
+  <div class="small-container single-product">
+      <div class="row">
+          <div class="col-2">
+              <img src="Golden.png" width="100%" id="ProductImg">
+              </div>
+          </div>
+          <div class="col-2">
+              <p>Tame / beast</p>
+              <h1>Golden Fairy</h1>
+              <h4><span class="price">120$</span><span class="actual-price">150$</span></h4>
+              <select>
+                  <option>Select Size</option>
+                  <option>XXL</option>
+                  <option>XL</option>
+                  <option>Large</option>
+                  <option>Medium</option>
+                  <option>Small</option>
+              </select>
+              <input type="number" value="1">
+              <br>
+              <button class="btn2">Buy Now</button>
+              <button class="btn2">
+                <svg class="_1KOMV2" width="16" height="16" viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg"><path class="" d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86" fill="#fff"></path></svg>
+                 Add To Cart
+              </button>
+
+              <h3>Product Details</h3>
+              <br>
+              <p> Buffed, Drop item x3
+              </p>
+
+            </div>
+      </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <h3>Nieli Market Shop</h3>
+      <div class="social">
+        <a href="#"><i class="fab fa-discord"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p class="copyright">
+        &copy; Nieli @2025 . All rights reserved
+      </p>
+    </div>
+</footer>
+
+  <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
+  <script src="./script.js"></script>
+
+  <script>
+      var ProductImg = document.getElementById("ProductImg");
+      var SmallImg = document.getElementsByClassName("small-img");   
+      SmallImg[0].onclick = function()
+      {
+        ProductImg.src = SmallImg[0].src;
+      }
+      SmallImg[1].onclick = function()
+      {
+        ProductImg.src = SmallImg[1].src;
+      }
+      SmallImg[2].onclick = function()
+      {
+        ProductImg.src = SmallImg[2].src;
+      }
+      SmallImg[3].onclick = function()
+      {
+        ProductImg.src = SmallImg[3].src;
+      }
+
+
+
+</script>
+</html>
